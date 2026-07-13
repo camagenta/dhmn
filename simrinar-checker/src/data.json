@@ -187,12 +187,6 @@
       "mualim": "RIZA KARYADI"
     },
     {
-      "name": "Makrifat Sabil Haq",
-      "nip": "ARN242-29112",
-      "kelompok": "3",
-      "mualim": "RIZA KARYADI"
-    },
-    {
       "name": "MUHAMMAD NAUFAL",
       "nip": "ARN232-41056",
       "kelompok": "3",
@@ -225,6 +219,12 @@
     {
       "name": "Dzulfahmi Razzi M",
       "nip": "ARN242-39075",
+      "kelompok": "3",
+      "mualim": "RIZA KARYADI"
+    },
+    {
+      "name": "Alauddin Syaifulanwar",
+      "nip": "62-82172040442",
       "kelompok": "3",
       "mualim": "RIZA KARYADI"
     },
@@ -529,6 +529,12 @@
       "mualim": "RISMAN"
     },
     {
+      "name": "Makrifat Sabil Haq",
+      "nip": "ARN242-29112",
+      "kelompok": "8",
+      "mualim": "SULISTIYONO"
+    },
+    {
       "name": "Adi Abu 'Abdurrahman",
       "nip": "ARN242-05014",
       "kelompok": "8",
@@ -537,12 +543,6 @@
     {
       "name": "FEBRIAN VALIANTINO",
       "nip": "ARN252-09076",
-      "kelompok": "8",
-      "mualim": "SULISTIYONO"
-    },
-    {
-      "name": "Wira Hartono",
-      "nip": "62-85218569152",
       "kelompok": "8",
       "mualim": "SULISTIYONO"
     },
@@ -757,6 +757,12 @@
       "mualim": "Djeni Setiadji"
     },
     {
+      "name": "Wira Hartono",
+      "nip": "62-85218569152",
+      "kelompok": "11",
+      "mualim": "Fauzan Syahrial Bakri"
+    },
+    {
       "name": "WIJAYANTO",
       "nip": "ARN261-16172",
       "kelompok": "11",
@@ -825,12 +831,6 @@
     {
       "name": "",
       "nip": "62-87730301010",
-      "kelompok": "11",
-      "mualim": "Fauzan Syahrial Bakri"
-    },
-    {
-      "name": "Alauddin Syaifulanwar",
-      "nip": "62-82172040442",
       "kelompok": "11",
       "mualim": "Fauzan Syahrial Bakri"
     }
@@ -982,12 +982,6 @@
       "mualim": "RIZA KARYADI"
     },
     {
-      "name": "Makrifat Sabil Haq",
-      "nip": "ARN242-29112",
-      "kelompok": "3",
-      "mualim": "RIZA KARYADI"
-    },
-    {
       "name": "MUHAMMAD NAUFAL",
       "nip": "ARN232-41056",
       "kelompok": "3",
@@ -1038,6 +1032,12 @@
     {
       "name": "FATRUL SYAHPUTRA",
       "nip": "ARN261-08135",
+      "kelompok": "3",
+      "mualim": "RIZA KARYADI"
+    },
+    {
+      "name": "Irsya Faiz Hazim",
+      "nip": "62-85691707317",
       "kelompok": "3",
       "mualim": "RIZA KARYADI"
     },
@@ -1318,6 +1318,12 @@
       "mualim": "RISMAN"
     },
     {
+      "name": "Makrifat Sabil Haq",
+      "nip": "ARN242-29112",
+      "kelompok": "8",
+      "mualim": "SULISTIYONO"
+    },
+    {
       "name": "FEBRIAN VALIANTINO",
       "nip": "ARN252-09076",
       "kelompok": "8",
@@ -1326,12 +1332,6 @@
     {
       "name": "Kardi",
       "nip": "ARN242-30114",
-      "kelompok": "8",
-      "mualim": "SULISTIYONO"
-    },
-    {
-      "name": "Wira Hartono",
-      "nip": "62-85218569152",
       "kelompok": "8",
       "mualim": "SULISTIYONO"
     },
@@ -1522,6 +1522,12 @@
       "mualim": "Djeni Setiadji"
     },
     {
+      "name": "Wira Hartono",
+      "nip": "62-85218569152",
+      "kelompok": "11",
+      "mualim": "FAUZAN SYAHRIAL BAKRI"
+    },
+    {
       "name": "M TAUFIK SETIYADI",
       "nip": "ARN231-16097",
       "kelompok": "11",
@@ -1584,14 +1590,8 @@
     {
       "name": "Sajid Fathan Yudistira",
       "nip": "62-85169823154",
-      "kelompok": "",
-      "mualim": "Tidak diketahui"
-    },
-    {
-      "name": "Irsya Faiz Hazim",
-      "nip": "62-85691707317",
-      "kelompok": "",
-      "mualim": "Tidak diketahui"
+      "kelompok": "11",
+      "mualim": "FAUZAN SYAHRIAL BAKRI"
     },
     {
       "name": "CS MUTUN COBA",
@@ -2016,12 +2016,6 @@
       "mualim": "SULISTIYONO"
     },
     {
-      "name": "Wira Hartono",
-      "nip": "62-85218569152",
-      "kelompok": "8",
-      "mualim": "SULISTIYONO"
-    },
-    {
       "name": "ABU ROZAN",
       "nip": "ARN222-31150",
       "kelompok": "8",
@@ -2176,6 +2170,12 @@
       "nip": "ARN222-02088",
       "kelompok": "10",
       "mualim": "Djeni Setiadji"
+    },
+    {
+      "name": "Wira Hartono",
+      "nip": "62-85218569152",
+      "kelompok": "11",
+      "mualim": "FAUZAN SYAHRIAL BAKRI"
     },
     {
       "name": "Abu Fatima",
