@@ -122,6 +122,13 @@
   font-weight: 600;
   display: inline-block;
   margin-bottom: 0.25rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.group-badge:hover {
+  background: rgba(16, 185, 129, 0.25);
+  transform: scale(1.05);
 }
 
 .mualim-name {
@@ -136,6 +143,135 @@
   color: var(--text-muted);
   background: rgba(0,0,0,0.2);
   border-radius: 0.75rem;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 1rem;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-content {
+  background: var(--bg-gradient-2);
+  border: 1px solid var(--glass-border);
+  border-radius: 1rem;
+  width: 100%;
+  max-width: 500px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  animation: slideUp 0.3s ease-out;
+}
+
+.modal-header {
+  padding: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h2 {
+  font-size: 1.25rem;
+  color: #f1f5f9;
+  font-weight: 700;
+}
+
+.close-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: #cbd5e1;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.close-btn:hover {
+  background: rgba(239, 68, 68, 0.8);
+  color: white;
+}
+
+.modal-body {
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.modal-mualim {
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.modal-mualim h4 {
+  color: var(--accent);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.modal-mualim p {
+  color: #f1f5f9;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.modal-participants h4 {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.participant-list {
+  list-style: none;
+}
+
+.participant-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+  display: flex;
+  align-items: center;
+}
+
+.participant-list li:last-child {
+  border-bottom: none;
+}
+
+.participant-list li::before {
+  content: "•";
+  color: var(--primary);
+  font-size: 1.5rem;
+  margin-right: 0.75rem;
+  line-height: 1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes slideUp {
@@ -160,3 +296,4 @@
     text-align: left;
   }
 }
+

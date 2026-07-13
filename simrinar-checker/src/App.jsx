@@ -5,6 +5,7 @@ import rawData from './data.json';
 function App() {
   const [selectedMatan, setSelectedMatan] = useState(Object.keys(rawData)[0] || '');
   const [searchQuery, setSearchQuery] = useState('');
+  const [selectedGroup, setSelectedGroup] = useState(null);
 
   // Extract the list of matans (topics)
   const matans = Object.keys(rawData);
@@ -18,6 +19,19 @@ function App() {
     
     return participants.filter(p => p.name.toLowerCase().includes(query));
   }, [searchQuery, selectedMatan]);
+
+  // Get data for selected group
+  const groupDetails = useMemo(() => {
+    if (!selectedGroup) return null;
+    const allInGroup = (rawData[selectedMatan] || []).filter(p => p.kelompok === selectedGroup);
+    // Usually mualim is the same for the whole group
+    const mualim = allInGroup.length > 0 ? allInGroup[0].mualim : 'Tidak diketahui';
+    return {
+      kelompok: selectedGroup,
+      mualim,
+      participants: allInGroup
+    };
+  }, [selectedGroup, selectedMatan]);
 
   return (
     <div className="app-container">
@@ -36,6 +50,7 @@ function App() {
               onChange={(e) => {
                 setSelectedMatan(e.target.value);
                 setSearchQuery(''); // Reset search on matan change
+                setSelectedGroup(null);
               }}
             >
               {matans.map(matan => (
@@ -53,7 +68,10 @@ function App() {
               type="text" 
               placeholder="Masukkan nama lengkap atau panggilan..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                setSelectedGroup(null);
+              }}
               autoComplete="off"
             />
           </div>
@@ -72,7 +90,13 @@ function App() {
                   {result.nip && <p>NIP: {result.nip}</p>}
                 </div>
                 <div className="result-group">
-                  <span className="group-badge">Kelompok {result.kelompok}</span>
+                  <span 
+                    className="group-badge"
+                    onClick={() => setSelectedGroup(result.kelompok)}
+                    title="Klik untuk melihat detail kelompok"
+                  >
+                    Kelompok {result.kelompok}
+                  </span>
                   <p className="mualim-name">Mualim: {result.mualim}</p>
                 </div>
               </div>
@@ -84,6 +108,32 @@ function App() {
           )}
         </div>
       </main>
+
+      {/* Modal for Group Details */}
+      {groupDetails && (
+        <div className="modal-overlay" onClick={() => setSelectedGroup(null)}>
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
+            <div className="modal-header">
+              <h2>Detail Kelompok {groupDetails.kelompok}</h2>
+              <button className="close-btn" onClick={() => setSelectedGroup(null)}>&times;</button>
+            </div>
+            <div className="modal-body">
+              <div className="modal-mualim">
+                <h4>Mualim Pembimbing</h4>
+                <p>{groupDetails.mualim}</p>
+              </div>
+              <div className="modal-participants">
+                <h4>Daftar Peserta ({groupDetails.participants.length})</h4>
+                <ul className="participant-list">
+                  {groupDetails.participants.map((p, idx) => (
+                    <li key={idx}>{p.name}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
