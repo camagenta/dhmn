@@ -22,8 +22,8 @@ function App() {
   return (
     <div className="app-container">
       <header className="header">
-        <h1>Cek Kelompok Hafalan</h1>
-        <p>Temukan kelompok dan Mualim Anda tanpa perlu membagikan data pribadi.</p>
+        <h1>Daurah DATA Hifdzul Mutun</h1>
+        <p>Cek kelompok dan Mualim hafalan Anda tanpa perlu membagikan data pribadi.</p>
       </header>
 
       <main>
